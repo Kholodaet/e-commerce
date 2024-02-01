@@ -245,6 +245,26 @@ ul {
   border: 1.2px solid #b4bec8;
   margin-bottom: 24px;
 }
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 .submit-btn {
   /* padding: 10px;
@@ -265,8 +285,11 @@ ul {
   font-weight: 700;
   line-height: normal;
   border: none;
+  transition: transform 0.3s ease;
+}
 
-  transition-duration: 400ms;
+.submit-btn:hover {
+  animation: vibrate 0.5s ease infinite;
 }
 
 .contact-wrap {
@@ -316,8 +339,8 @@ img {
   margin-top: 37px;
 }
 
-.submit-btn:hover,
+/* .submit-btn:hover,
 .submit-btn:focus {
   background-color: aliceblue;
   transform: rotate(360deg);
-}
+} */
