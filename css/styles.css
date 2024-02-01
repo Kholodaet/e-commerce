@@ -344,3 +344,21 @@ img {
   background-color: aliceblue;
   transform: rotate(360deg);
 } */
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Застосування анімації до елементу з класом subtitle-contact */
+.subtitle-contact {
+  animation: fadeInDown 1s ease-in-out;
+  animation-duration: 2s;
+  /* Застосування анімації на протязі 1 секунди з ефектом ease-in-out */
+}
